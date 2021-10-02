@@ -1,6 +1,7 @@
 package duplicate.fun.impl;
 
 import java.util.HashSet;
+import java.util.Set;
 
 import duplicate.fun.DuplicateChecker;
 
@@ -21,7 +22,7 @@ public class HashSetSolution implements DuplicateChecker{
 
 	@Override
 	public boolean containsDuplicate(String input) {
-		HashSet<Character> hashset = new HashSet<Character>();
+		Set<Character> hashset = new HashSet<Character>();
 		for(int i = 0; i < input.length(); i++) {
 			if(hashset.add(input.charAt(i)) == false) {
 				return true;
